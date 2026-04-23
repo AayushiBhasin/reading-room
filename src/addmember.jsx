@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { db } from "./firebase";
 import { ref as dbRef, set } from "firebase/database";
-import "./addMember.css"; // IMPORT CSS
+import "./addmember.css"; // IMPORT CSS
 
 export default function AddMember() {
   const [name, setName] = useState("");
