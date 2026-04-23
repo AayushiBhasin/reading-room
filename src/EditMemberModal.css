@@ -1,0 +1,177 @@
+/* =======================
+   MODAL BACKDROP
+======================= */
+.edit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =======================
+   MODAL BOX
+======================= */
+.edit-modal-box {
+  background: #ffffff;
+  width: 560px;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+  animation: popIn 0.2s ease-out;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* =======================
+   HEADER WITH WHITE BACKGROUND
+======================= */
+.edit-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* gradient font color */
+.edit-modal-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 700;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edit-close-btn {
+  font-size: 1.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+  transition: 0.2s;
+  line-height: 1;
+}
+
+.edit-close-btn:hover {
+  color: #000;
+  transform: scale(1.15);
+}
+
+/* =======================
+   FORM BODY
+======================= */
+.edit-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-input-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.edit-input-group input {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 9px;
+  outline: none;
+  font-size: 0.88rem;
+  transition: 0.2s;
+  background: #f9fafb;
+}
+
+.edit-input-group input:focus {
+  border-color: #2563eb;
+  background: white;
+}
+
+.readonly-input {
+  background: #e5e7eb;       /* light grey */
+  color: #6b7280;            /* dim text */
+  cursor: not-allowed;
+  border: 1.5px solid #d1d5db;
+  border-radius: 9px;
+  pointer-events: none;      /* 100% disables typing AND clicking */
+}
+
+
+/* =======================
+   BUTTONS (SIDE BY SIDE)
+======================= */
+.edit-modal-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+
+/* PRIMARY UPDATE BUTTON (filled) */
+.save-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.save-btn:hover {
+  filter: brightness(0.9);
+}
+
+/* SECONDARY DELETE BUTTON (border only) */
+.delete-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+  color: #1d4ed8;
+  border: 2px solid #1d4ed8;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #1d4ed8;
+  color: white;
+}
+
+/* =======================
+   RESPONSIVE (buttons stay in one line)
+======================= */
+@media (max-width: 480px) {
+  .edit-modal-box {
+    width: 90%;
+  }
+
+  .edit-modal-actions {
+    flex-direction: row;
+  }
+}

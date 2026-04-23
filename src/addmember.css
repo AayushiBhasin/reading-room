@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+
+.center-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f8fa;
+}
+
+
+/* FORM WRAPPER ONLY */
+.form-wrapper {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 38px 40px;
+  border-radius: 22px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.45s ease;
+}
+
+/* LOGO */
+.logo-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+   
+}
+
+.logo-box svg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #005b87;
+  padding: 10px;
+}
+
+/* TITLE */
+.Add-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  /* font-style: italic; */
+  background: linear-gradient(135deg, #60a5fa, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LABEL LEFT ALIGNED */
+label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: left !important;
+}
+
+/* GROUP */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+input,
+select {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1.4px solid #d6d8df;
+  background: #fafafa;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+input:focus,
+select:focus {
+  border-color: #4f46e5;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  outline: none;
+}
+
+/* ROW */
+.form-row {
+  display: flex;
+  gap: 18px;
+}
+
+/* RADIO */
+.radio-group {
+  display: flex;
+  gap: 22px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.radio-item input {
+  width: 18px;
+  height: 18px;
+  accent-color:  #3b82f6;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: #3f3ab8;
+  box-shadow: 0 5px 18px rgba(79,70,229,0.3);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+.form-wrapper {
+
+  padding: 15px 18px;
+ 
+}
+}

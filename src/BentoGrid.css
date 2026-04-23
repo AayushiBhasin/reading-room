@@ -1,0 +1,133 @@
+/* ================================
+   GRID WRAPPER
+================================ */
+.bento-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 30px 6%;
+  width: 100%;
+  background: #f8fafc;
+
+}
+
+/* Base styling for all big numbers */
+.big-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 8px;
+  line-height: 1;
+
+  /* smooth fade-in animation */
+  animation: fadeIn 0.3s ease-in-out;
+}
+/* Blue number (Total Members) */
+.card-members .big-number {
+  color: #1e40af;  /* deep blue */
+}
+
+/* Green number (Active Members) */
+.card-active .big-number {
+  color: #0f7a46; /* deep fresh green */
+}
+
+/* Red number (Due Amount) */
+.card-dues .big-number {
+  color: #b91c1c; /* deep red */
+}
+
+/* subtle animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ================================
+   BASE CARD
+================================ */
+.card {
+  flex: 1 1 calc(33.33% - 30px);
+  min-width: 280px;
+
+  padding: 38px;
+  border-radius: 20px;
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================================
+   SOFT BACKGROUND VARIANTS
+================================ */
+
+/* Total Members - Light Blue */
+.card-members {
+  background: #e8f2ff; /* soft baby blue */
+  border-color: #c7ddff;
+}
+
+/* Active Members - Light Green */
+.card-active {
+  background: #cff4e1c9; /* soft mint green */
+  border-color: #b5f3d4;
+}
+
+/* Due Amount - Light Red */
+.card-dues {
+  background: #ffecec; /* soft light red */
+  border-color: #f7c9c9;
+}
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+.card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.card .count {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+/* Tablet (2 per row) */
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 30px);
+  }
+}
+
+/* Mobile (1 per row) */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}

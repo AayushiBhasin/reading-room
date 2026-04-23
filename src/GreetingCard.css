@@ -1,0 +1,85 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap'); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Wrapper usage note:
+   You can place this card anywhere in your app.
+*/
+
+.greeting-card {
+  background: #ffffff;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+  padding: 40px;
+  /* max-width: 500px; */
+  width: 90%;
+  margin: 20px 4%; /* optional centering */
+}
+
+.greeting-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.gold-bar {
+  width: 4px;
+  height: 80px;
+ background: linear-gradient(90deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.hello-text {
+  color: #0077ff;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.morning-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+.welcome-text {
+  color: #6b7280;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.institute-name {
+  color: #6b7280;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .greeting-card {
+    padding: 24px;
+  }
+
+  .morning-text {
+    font-size: 2rem;
+  }
+
+  .gold-bar {
+    height: 60px;
+  }
+}
