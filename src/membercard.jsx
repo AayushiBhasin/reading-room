@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import EditMemberModal from "./EditMemberModal";
-import "./memberCard.css";
+import "./membercard.css";
 
 export default function MemberCard({ members }) {
   const [selectedMember, setSelectedMember] = useState(null);
